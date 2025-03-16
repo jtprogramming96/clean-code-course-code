@@ -21,8 +21,8 @@ class Rectangle:
         end_point_coordY = self.origin.coordY + self.height
         print('Starting Point (X): ' + str(self.origin.coordX))
         print('Starting Point (Y): ' + str(self.origin.coordY))
-        print('End Point (X): ' + str(end_point_coordX))
-        print('End Point (Y): ' + str(end_point_coordY))
+        print('End Point X-Axis (Top Right): ' + str(end_point_coordX))     # Recordar que la pantalla en los ordenadores comienza en la esquina superior izquierda. Al sumar en X avanzas a la derecha
+        print('End Point Y-Axis (Bottom Left): ' + str(end_point_coordY))   # al sumar en Y avanzas hacia abajo
 
 
 def build_rectangle():
