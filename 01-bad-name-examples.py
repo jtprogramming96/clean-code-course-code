@@ -1,6 +1,6 @@
 from datetime import datetime
 
-class BlogPost:
+class BlogPost:                                     # el nombre Entity era muy genérico, lo que esta clase guarda son publicaciones o blog posts
     def __init__(self, title, description, publihed_date):
         self.title = title
         self.description = description
