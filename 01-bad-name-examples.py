@@ -1,24 +1,22 @@
 from datetime import datetime
 
-
-class Entity:
-    def __init__(self, title, description, ymdhm):
+class BlogPost:
+    def __init__(self, title, description, publihed_date):
         self.title = title
         self.description = description
-        self.ymdhm = ymdhm
+        self.published_date = publihed_date
+
+    def print(self):                                 # como particularmente imprime blog posts, convertimos la función a un método de clase.
+        print('Title: ' + self.title)                # Además, ya no recibe ningún parámetros, ya que imprime los valores de sus atributos
+        print('Description: ' + self.description)
+        print('Published: ' + self.published_date)
 
 
-def output(item):
-    print('Title: ' + item.title)
-    print('Description: ' + item.description)
-    print('Published: ' + item.ymdhm)
+title = 'El código limpio es genial!'
+description = 'Ahora estoy escribiendo código limpio y es genial. Deberías intentarlo!'     # evitamos usar abreviaturas, ya que es más limpio description que desc
+today = datetime.now()
+formatted_date = today.strftime('%Y-%m-%d %H:%M')
 
+post = BlogPost(title, description, formatted_date)
 
-summary = 'Clean Code Is Great!'
-desc = 'Actually, writing Clean Code can be pretty fun. You\'ll see!'
-new_date = datetime.now()
-publish = new_date.strftime('%Y-%m-%d %H:%M')
-
-item = Entity(summary, desc, publish)
-
-output(item)
+post.print()                                               # además, renombramos print_blog_post a simplemente print, aumentando la limpieza del código
